@@ -3,8 +3,9 @@ import './Mail.css';
 
 function Mail() {
     return (
-        <div>
-            
+        <div className="mail">
+            <h1>Muchas putas quieren chuparte la</h1>
+            <p>pijita</p>
         </div>
     )
 }

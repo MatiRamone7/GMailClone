@@ -37,3 +37,12 @@
     transform: translateY(0px);
   }
 }
+
+.app__body {
+  display: flex;
+  height: 100vh;
+}
+
+.app {
+  height: 100vh;
+}
