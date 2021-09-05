@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Links Utiles
+
+### FireBase
+
+https://console.firebase.google.com/u/0/project/clone-yt-84534/overview
+
+### Material-Ui
+
+https://material-ui.com/components/material-icons/
+
+### React Router
+
+https://reactrouter.com/web/guides/quick-start
+
 ## Available Scripts
 
 In the project directory, you can run:
