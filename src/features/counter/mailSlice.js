@@ -4,20 +4,20 @@ import { fetchCount } from './counterAPI';
 export const mailSlice = createSlice({
   name: 'mail',
   initialState :{
-      sendMessageIsOpen: false,
+      sendMessageIsOpen: true,
   },
   reducers: {
     openSendMessage: state => {
       state.sendMessageIsOpen = true;
     },
     closeSendMessage: state => {
-      state.closeSendMessage = false;
+      state.sendMessageIsOpen = false;
     },
   },
 });
 
 export const { openSendMessage, closeSendMessage} = mailSlice.actions;
 
-export const selectSendMessageIsOpen = (state) => state.mail.selectSendMessageIsOpen;
+export const selectSendMessageIsOpen = (state) => state.mail.sendMessageIsOpen;
 
 export default mailSlice.reducer;
