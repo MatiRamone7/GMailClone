@@ -69,9 +69,9 @@ function EmailList() {
 
             <div className="emailList__list">
                 <EmailRow
-                    title="BairesGirls"
-                    subject="Nuevas trolangas en tu zonarda!!!"
-                    description="Delfy, Sofi, Sarita, JulyHollywood, Daphne/Yamil"
+                    title="Test Title"
+                    subject="Test Subject"
+                    description="Test Description"
                     time="10pm"
                 />
 
