@@ -14,8 +14,11 @@ import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import EmailRow from './EmailRow';
 import { Rating } from 'react-simple-star-rating';
+import { RatingView } from 'react-simple-star-rating';
 
 function EmailList() {
+    // Fuente: https://www.npmjs.com/package/react-simple-star-rating
+
     const [rating, setRating] = useState(0) // initial rating value
 
     // Catch Rating value
@@ -73,6 +76,8 @@ function EmailList() {
                 />
 
             <Rating onClick={handleRating} ratingValue={rating} /* Rating Props */ />
+            <br />
+            <RatingView ratingValue={rating} /* RatingView Props */ />
                 
             </div>
 
