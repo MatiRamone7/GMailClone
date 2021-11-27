@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Checkbox, IconButton } from '@material-ui/core';
 import './EmailList.css';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
@@ -13,8 +13,17 @@ import Section from './Section';
 import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import EmailRow from './EmailRow';
+import { Rating } from 'react-simple-star-rating';
 
 function EmailList() {
+    const [rating, setRating] = useState(0) // initial rating value
+
+    // Catch Rating value
+    const handleRating = (rate) => {
+        setRating(rate)
+        // Some logic
+    }
+
     return (
         <div className="emailList">
             <div className="emailList__settings">
@@ -62,6 +71,9 @@ function EmailList() {
                     description="Delfy, Sofi, Sarita, JulyHollywood, Daphne/Yamil"
                     time="10pm"
                 />
+
+            <Rating onClick={handleRating} ratingValue={rating} /* Rating Props */ />
+                
             </div>
 
         </div>

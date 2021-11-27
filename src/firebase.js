@@ -1,24 +1,21 @@
-import firebase from 'firebase'
+import { initializeApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore/lite';
 
-/*
-    Conexion de back con front estaria aca
-*/
-
+// Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDq3fIs99V0k4E-MCMqn_iGtw0ghKpdTGo",
-    authDomain: "clone-yt-84534.firebaseapp.com",
-    projectId: "clone-yt-84534",
-    storageBucket: "clone-yt-84534.appspot.com",
-    messagingSenderId: "1074019927473",
-    appId: "1:1074019927473:web:47c6567b0ecd97a584e990",
-    measurementId: "G-MJ3KNLCJR0"
-  };
+  apiKey: "AIzaSyDq3fIs99V0k4E-MCMqn_iGtw0ghKpdTGo",
+  authDomain: "clone-yt-84534.firebaseapp.com",
+  projectId: "clone-yt-84534",
+  storageBucket: "clone-yt-84534.appspot.com",
+  messagingSenderId: "1074019927473",
+  appId: "1:1074019927473:web:47c6567b0ecd97a584e990"
+};
 
-const firebaseApp = firebase.initializeApp(firebaseConfig)
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore();
+const auth = getAuth();
+const provider = new GoogleAuthProvider();
 
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
-
-export { db, auth, provider }
+export { firebaseApp, auth, db, provider };
